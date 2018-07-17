@@ -1,13 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export const Header = props => {
   return (
     <nav className="navbar navbar-default">
       <div className="container">
         <div className="navbar-header">
-          <ul className="nav navbar">
+          <ul className="nav navbar-nav">
             <li>
-              <a href="#">{props.homeLink}</a>
+              <NavLink to={"/home"} activeStyle={{ color: "red" }}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={"/user/5"} activeClassName="active">User</NavLink>
             </li>
           </ul>
         </div>
